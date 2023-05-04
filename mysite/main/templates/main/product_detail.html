@@ -1,0 +1,13 @@
+{% extends 'main/base.html' %}
+
+{% block title %}{{ my_prod.name }} Product Page{% endblock %}
+
+
+{% block name %}{{ my_prod.name }} Product Page{% endblock %}
+
+{% block content %}
+
+    <h4>{{ my_prod.name }}</h4>
+    <p>{{ my_prod.history }}</p>
+
+{% endblock %}

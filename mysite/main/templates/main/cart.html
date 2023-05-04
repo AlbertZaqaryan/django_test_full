@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Cart{% endblock %}
+
+
+{% block name %}Cart{% endblock %}
+
+{% block content %}
+    {% for i in cart_list %}
+        <img src="{{ i.prod_item.img.url }}" style="height: 50px; width: 50px;" alt="">
+        <h5>{{ i.prod_item.name }}</h5>
+        <form action="{% url 'detele_product' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" name="id" value="{{ i.id }}">Delete</button>
+        </form>
+    {% endfor %}
+        <h2>Sum = {{ summ }}</h2>
+
+{% endblock %}

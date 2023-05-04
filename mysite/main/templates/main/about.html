@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% block title %}About{% endblock %}
+
+
+{% block name %}About{% endblock %}
+
+
+{% block content %}
+    <main>
+		<section class="left">
+			<h2>{{ about_info.name }}</h2>
+            <p>{{ about_info.text }}</p>
+		</section>
+	</main>
+{% endblock %}

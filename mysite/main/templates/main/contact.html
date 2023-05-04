@@ -1,0 +1,27 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+
+{% block name %}Home{% endblock %}
+
+{% block content %}
+
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            <p>
+                <input type="text" name="username" placeholder="Enter your name" id="">
+            </p>
+            <p>
+                <input type="email" name="email" placeholder="Enter your email" id="">
+            </p>
+            <p>
+                <input type="text" name="review" placeholder="Review" id="" style="height: 300px; width: 500px;">
+            </p>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+
+{% endblock %}
